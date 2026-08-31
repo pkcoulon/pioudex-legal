@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Support · Pioudex</title>
+<style>
+  /* Palette reprise des tokens de l'app (lib/theme/tokens.dart) :
+     forest 2B3320 · sage B9C08D · cream F6EEDC · ink 2E2318 · robin A4543A */
+  :root { color-scheme: light;
+          --forest:#2B3320; --sagepale:#D8D7B5; --cream:#F6EEDC; --creamdeep:#B9A183;
+          --ink:#2E2318; --inksoft:#554C3F; --robin:#6E3524; --goldink:#7A5A22; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--cream); color:var(--forest);
+         font:16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+         -webkit-text-size-adjust:100%; }
+  main { max-width:680px; margin:0 auto; padding:48px 22px 80px; }
+  h1 { font-size:30px; line-height:1.2; letter-spacing:-.02em; margin:0 0 6px; }
+  h2 { font-size:20px; margin-top:38px; letter-spacing:-.01em; }
+  p, li { color:var(--inksoft); }
+  li { margin-bottom:6px; }
+  strong { color:var(--ink); }
+  .updated { font-size:13px; color:var(--inksoft); margin-top:0; }
+  a { color:var(--robin); }
+  .mail { display:inline-block; background:rgba(216,215,181,.34);
+          border:1px solid rgba(185,161,131,.5); border-radius:14px;
+          padding:12px 16px; margin:8px 0 4px; font-weight:700;
+          text-decoration:none; word-break:break-word; }
+  footer { margin-top:56px; padding-top:18px; border-top:1px solid rgba(185,161,131,.5);
+           font-size:13px; color:var(--inksoft); }
+  footer a { white-space:nowrap; }
+</style>
+</head>
+<body>
+<main>
+  <h1>🐦 Support</h1>
+  <p class="updated">Pioudex · dernière mise à jour : 31 août 2026</p>
+
+  <p>Une question, un bug, une espèce mal identifiée, une erreur dans une fiche :</p>
+  <p><a class="mail" href="mailto:coulonpierrick@gmail.com?subject=Pioudex%20%3A%20support">coulonpierrick@gmail.com</a></p>
+  <p>Pioudex est éditée par <strong>Pierrick Coulon</strong>, entrepreneur individuel
+     établi en France. Les messages sont lus et traités par une seule personne : compte
+     quelques jours.</p>
+
+  <h2>Ce qui aide à répondre vite</h2>
+  <ul>
+    <li>Le modèle de téléphone et la version du système.</li>
+    <li>Ce que tu faisais au moment du problème, et ce que l'écran affichait.</li>
+    <li>Pour une identification douteuse : le nom rendu par l'app, et ce que tu pensais
+        avoir devant toi.</li>
+    <li>Pour une erreur dans une fiche d'espèce : la phrase en cause. Aucun fait n'est
+        publié sans source, donc une correction est toujours vérifiable.</li>
+  </ul>
+
+  <h2>Quelques réponses d'avance</h2>
+  <ul>
+    <li><strong>L'identification au son fonctionne sans réseau</strong> : le modèle est
+        embarqué dans l'app. <strong>L'identification par la photo demande une
+        connexion</strong> : elle passe par un serveur.</li>
+    <li>Le catalogue est embarqué : <strong>le dex se consulte hors connexion</strong>.</li>
+    <li>La permission de localisation sert à savoir dans quel département tu te trouves.
+        Rien de plus fin que le département n'est enregistré. Le détail est dans la
+        <a href="confidentialite.html">politique de confidentialité</a>.</li>
+    <li><strong>Effacer ta sauvegarde en ligne</strong> se fait dans l'app : voir
+        <a href="supprimer-mon-compte.html">Supprimer mon compte</a>.</li>
+    <li><strong>Un abonnement Pioudex Plus</strong> se gère dans les réglages de ta
+        boutique, App Store ou Google Play, qui encaisse et rembourse. Les
+        <a href="conditions.html">conditions d'utilisation</a> en donnent le détail.</li>
+    <li><strong>Désinstaller l'app efface tout ce qui est local</strong>, journal et prises
+        compris. Si ta sauvegarde est reliée à un compte Apple ou Google, tu la récupères
+        en reliant ce même compte après réinstallation. Si elle est restée anonyme, elle
+        n'est plus joignable.</li>
+  </ul>
+
+  <footer>Pioudex, les oiseaux de France, au son et à l'image.
+    <br><a href="conditions.html">Conditions d'utilisation</a> ·
+    <a href="confidentialite.html">Politique de confidentialité</a> ·
+    <a href="supprimer-mon-compte.html">Supprimer mon compte</a> ·
+    <a href="support.html">Support</a></footer>
+</main>
+</body>
+</html>

@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Politique de confidentialité · Pioudex</title>
+<style>
+  /* Palette reprise des tokens de l'app (lib/theme/tokens.dart) :
+     forest 2B3320 · sage B9C08D · cream F6EEDC · ink 2E2318 · robin A4543A */
+  :root { color-scheme: light;
+          --forest:#2B3320; --sage:#B9C08D; --sagepale:#D8D7B5; --cream:#F6EEDC;
+          --creamdeep:#B9A183; --ink:#2E2318; --inksoft:#554C3F;
+          --robin:#6E3524; --goldink:#7A5A22; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--cream); color:var(--forest);
+         font:16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+         -webkit-text-size-adjust:100%; }
+  main { max-width:680px; margin:0 auto; padding:48px 22px 80px; }
+  h1 { font-size:30px; line-height:1.2; letter-spacing:-.02em; margin:0 0 6px; }
+  h2 { font-size:20px; margin-top:38px; letter-spacing:-.01em; }
+  h3 { font-size:16.5px; margin-top:26px; margin-bottom:4px; color:var(--ink); }
+  p, li, td, th { color:var(--inksoft); }
+  li { margin-bottom:6px; }
+  strong { color:var(--ink); }
+  .updated { font-size:13px; color:var(--inksoft); margin-top:0; }
+  .pill { display:inline-block; background:rgba(185,192,141,.28); color:var(--goldink);
+          border:1px solid rgba(138,144,102,.45); border-radius:999px;
+          padding:4px 12px; font-size:13px; font-weight:600; margin:2px 4px 2px 0; }
+  a { color:var(--robin); }
+  .note { background:rgba(216,215,181,.34); border:1px solid rgba(185,161,131,.5);
+          border-radius:14px; padding:14px 16px; font-size:14.5px; margin:16px 0; }
+  .note p:first-child { margin-top:0; }
+  .note p:last-child { margin-bottom:0; }
+  .tablewrap { overflow-x:auto; margin:16px 0; }
+  table { border-collapse:collapse; width:100%; font-size:14.5px; min-width:440px; }
+  th, td { text-align:left; vertical-align:top; padding:9px 10px;
+           border-bottom:1px solid rgba(185,161,131,.5); }
+  th { color:var(--ink); font-weight:700; }
+  code { font-family:ui-monospace, SFMono-Regular, Menlo, monospace; font-size:.92em;
+         background:rgba(185,192,141,.25); border-radius:4px; padding:1px 4px; }
+  footer { margin-top:56px; padding-top:18px; border-top:1px solid rgba(185,161,131,.5);
+           font-size:13px; color:var(--inksoft); }
+  footer a { white-space:nowrap; }
+</style>
+</head>
+<body>
+<main>
+  <h1>🐦 Politique de confidentialité</h1>
+  <p class="updated">Pioudex · dernière mise à jour : 31 août 2026</p>
+  <p>
+    <span class="pill">Catalogue embarqué</span>
+    <span class="pill">Position à la maille du département</span>
+    <span class="pill">Aucun traceur</span>
+  </p>
+
+  <p>Cette page décrit ce que Pioudex mesure, ce qu'elle garde, ce qui sort du téléphone,
+     vers qui, et ce que tu peux exiger. Elle est écrite à partir du code de l'app tel
+     qu'il est à la date ci-dessus. Quand une garantie a une limite, la limite est écrite
+     avec elle.</p>
+
+  <h2>1. Qui est responsable</h2>
+  <p>Le responsable du traitement est <strong>Pierrick Coulon</strong>, entrepreneur
+     individuel établi en France, éditeur de Pioudex.
+     Contact : <a href="mailto:coulonpierrick@gmail.com">coulonpierrick@gmail.com</a>.
+     Le traitement relève du Règlement général sur la protection des données (RGPD).</p>
+
+  <h2>2. Les destinations réseau</h2>
+  <p>Les destinations réseau de l'app sont les suivantes, et chacune est décrite plus bas :</p>
+  <ul>
+    <li>le <strong>service d'identification par la photo</strong> ;</li>
+    <li>la <strong>sauvegarde en ligne</strong> de ta collection ;</li>
+    <li>les <strong>rapports de plantage</strong>.</li>
+  </ul>
+  <p>S'y ajoute, si tu prends l'abonnement, le service qui vérifie qu'il est actif.
+     L'identification au son s'exécute normalement sur le téléphone, le modèle étant embarqué dans l'app ;
+     en cas de panne de ce modèle embarqué, les enregistrements de la session (une à trois prises) sont
+     envoyés à ce même service, avec le code de département et le mois. Le modèle embarqué
+     s'exécute sur le téléphone.</p>
+
+  <h2>3. Ce qui est enregistré sur le téléphone</h2>
+  <ul>
+    <li><strong>Le journal du dex</strong> : pour chaque espèce débloquée, un identifiant,
+        le nom scientifique, le <strong>code de département</strong>, le geste employé
+        (son ou photo), le palier de confiance (certain ou probable), la date, et le lien
+        vers la prise conservée.</li>
+    <li><strong>Les prises</strong> : les photos et les enregistrements sonores que tu
+        choisis de garder, rangés dans le dossier de l'app.</li>
+    <li><strong>Le département retenu</strong>, dans un fichier qui ne contient que ce
+        code.</li>
+    <li><strong>Le nombre de photos identifiées dans la journée</strong>, qui sert au
+        quota de la version gratuite. Il est compté en local et n'est jamais synchronisé.</li>
+    <li><strong>Le réglage des notifications d'événements.</strong></li>
+  </ul>
+  <p>Le journal du dex n'ajoute que des lignes : il n'a pas de geste de suppression
+     unitaire. Ce qui est sur le téléphone disparaît avec la désinstallation de l'app, et
+     les prises peuvent être effacées avant cela (voir le point 12).</p>
+
+  <h2>4. La position</h2>
+  <p>Pioudex est un jeu de collection départemental : la position sert à savoir dans quel
+     département tu te trouves, et à quel point une espèce y est rare.</p>
+  <ul>
+    <li>La permission de localisation n'est demandée <strong>qu'au moment où tu fais le
+        geste</strong>, pendant la prise en main, jamais au lancement.</li>
+    <li><strong>Rien de plus fin que le code de département n'est enregistré</strong>, ni
+        sur le téléphone, ni en ligne. Les coordonnées relevées vivent en mémoire le temps
+        d'être converties en code de département.</li>
+    <li>La <strong>commune</strong> est parfois affichée à l'écran. Elle est résolue hors
+        ligne, contre la table des communes embarquée dans l'app, et n'est enregistrée
+        nulle part.</li>
+    <li>La base en ligne <strong>ne comporte aucune colonne de latitude ou de longitude</strong>.</li>
+  </ul>
+  <div class="note">
+    <p><strong>La précision de la mesure n'est pas la même sur les deux systèmes.</strong>
+       Sur iOS, l'app demande une position précise. Sur Android, elle ne déclare que la
+       localisation approximative, ce qui plafonne la précision au niveau du système.
+       Dans les deux cas, ce qui est conservé s'arrête au département.</p>
+  </div>
+
+  <h2>5. Les photos et les sons</h2>
+  <h3>Ce qui est écrit sur le téléphone</h3>
+  <p>Les fichiers image conservés dans l'app sont <strong>dépouillés de leurs métadonnées
+     avant d'être écrits</strong> : les blocs EXIF et les commentaires sont retirés des
+     JPEG, les blocs de texte et d'EXIF sont retirés des PNG.</p>
+  <h3>Une photo prise dans ta galerie</h3>
+  <p>Si la photo d'origine porte des coordonnées GPS, elles sont lues
+     <strong>localement</strong>, converties en code de département contre les contours
+     embarqués dans l'app, puis abandonnées. Ni la latitude ni la longitude ne sont
+     écrites, ni envoyées. La copie qui part au service d'identification est celle qui a
+     déjà été vidée de ses métadonnées.</p>
+  <h3>Une photo prise avec l'appareil</h3>
+  <div class="note">
+    <p>Sur ce chemin, le fichier envoyé au service d'identification est celui que produit
+       le sélecteur du système, qui le ré-encode à ses propres dimensions.
+       <strong>Pioudex ne garantit pas que ce fichier soit dépourvu de métadonnées.</strong>
+       Le dépouillement explicite décrit plus haut intervient plus tard, au moment où la
+       photo est conservée : le fichier gardé sur le téléphone, lui, est bien nettoyé.</p>
+  </div>
+  <h3>Les sons</h3>
+  <p>Les enregistrements sonores sont écrits sur le téléphone et <strong>ne montent jamais
+     dans la sauvegarde</strong> : elle ne porte que les photos, et le dépôt en ligne
+     n'accepte que des formats image. Ils peuvent en revanche partir au service
+     d'identification, dans le seul cas décrit au point 6 : une panne du modèle embarqué. Aucune purge automatique n'efface les prises :
+     elles restent jusqu'à ce que tu les effaces ou que tu désinstalles l'app.</p>
+
+  <h2>6. L'identification par la photo</h2>
+  <p>L'identification au son s'exécute sur le téléphone. Elle n'émet aucune requête tant que le modèle
+     embarqué répond ; s'il tombe en panne, les enregistrements de la session partent au service
+     d'identification, comme le fait une photo.
+     L'identification par la photo appelle un service hébergé sur
+     <strong>Google Cloud Run</strong>. La requête ne contient que quatre choses :</p>
+  <ul>
+    <li>le <strong>fichier</strong> à identifier ;</li>
+    <li>le <strong>code de département</strong> ;</li>
+    <li>le <strong>mois</strong> de la prise : le jour est forcé au premier du mois ;</li>
+    <li>un <strong>jeton partagé</strong>, quand il est configuré. Il sert à empêcher
+        n'importe qui d'utiliser le service aux frais du projet. Il n'identifie personne et
+        ne dépend pas de ton compte.</li>
+  </ul>
+  <p><strong>Aucune coordonnée n'est transmise.</strong></p>
+  <p>Côté service, les fichiers sont <strong>lus en mémoire et ne sont pas écrits sur
+     disque</strong>. Une ligne de journal technique est produite pour suivre la
+     calibration du modèle : le mode, un identifiant de requête tiré au hasard, le code de
+     département, le mois, les scores obtenus, le temps de calcul et les cinq premières
+     hypothèses. Elle ne contient ni identifiant d'utilisateur, ni position plus fine que
+     le département.</p>
+  <div class="note">
+    <p>Deux précisions que le code ne peut pas garantir à lui seul.
+       D'une part, l'interface du service <strong>sait accepter</strong> une latitude et une
+       longitude : l'app n'en envoie aucune, mais l'API en accepterait.
+       D'autre part, comme pour tout service joint par Internet, l'hébergeur voit
+       <strong>l'adresse IP</strong> qui l'appelle, au niveau du transport. C'est vrai
+       également pour la sauvegarde et pour les rapports de plantage.</p>
+  </div>
+
+  <h2>7. La sauvegarde en ligne</h2>
+  <p>La sauvegarde recopie ta collection sur un serveur, pour que tu la retrouves si tu
+     changes de téléphone. Elle est hébergée chez <strong>Supabase, région Paris</strong>.</p>
+  <h3>Ce qui monte</h3>
+  <ul>
+    <li>Une ligne par espèce débloquée, avec exactement : un identifiant généré par
+        l'appareil, l'identifiant de ton compte, le nom scientifique, le code de
+        département, le geste (son ou photo), le palier de confiance, la date de la
+        capture, la référence de la prise et la date d'écriture.</li>
+    <li>Les <strong>photos</strong> conservées, dans un dépôt privé, rangées sous
+        l'identifiant de ton compte.</li>
+  </ul>
+  <h3>Ce qui ne monte pas</h3>
+  <ul>
+    <li>Les <strong>enregistrements sonores</strong>.</li>
+    <li>Toute position plus fine que le département.</li>
+    <li>Tes statistiques, ton niveau, ton expérience et tes badges : ils sont recalculés
+        sur le téléphone à partir du journal, le serveur n'en porte aucun.</li>
+  </ul>
+  <p>L'accès est cloisonné par ligne et par dossier : le serveur n'autorise la lecture et
+     l'écriture que sur les lignes et les fichiers rattachés à ton compte. Aucune règle de
+     modification ni de suppression n'existe sur les lignes du journal, qui ne fait
+     qu'ajouter ; la suppression complète est décrite au point 12.</p>
+  <div class="note">
+    <p><strong>L'app n'offre aucun moyen de désactiver cette sauvegarde.</strong> Il n'y a
+       pas d'interrupteur : le compte se crée tout seul et la synchronisation suit.</p>
+  </div>
+
+  <h2>8. Le compte</h2>
+  <p><strong>Le compte se crée sans écran et sans geste</strong>, de façon anonyme, à la
+     première synchronisation possible. Il ne contient qu'un identifiant aléatoire, plus
+     les lignes du journal et les photos qui s'y rattachent. Aucun écran de l'app ne le
+     demande, et il n'est obligatoire pour rien : l'app est entière sans lui.</p>
+  <p>Tu peux <strong>relier cette sauvegarde à un compte Apple ou Google</strong>, depuis
+     Profil, puis Réglages, puis la section Sauvegarde. C'est facultatif, et c'est ce qui
+     te permet de retrouver ta collection sur un autre téléphone.</p>
+  <ul>
+    <li>Pioudex ne voit <strong>aucun mot de passe</strong> : le flux est celui d'Apple ou
+        de Google.</li>
+    <li>Le rattachement fait entrer <strong>une adresse e-mail</strong> dans la base des
+        comptes : c'est ce que le service d'authentification demande pour créer un compte.
+        Apple permet de la masquer derrière son relais privé. <strong>Ton nom n'est pas
+        demandé</strong>, et cette adresse n'est affichée nulle part dans l'app : l'écran
+        ne nomme que la porte employée, ton compte Apple ou ton compte Google.</li>
+    <li>Quand ta sauvegarde était anonyme, elle est <strong>convertie</strong> et
+        l'identifiant reste le même : les captures survivent. Une exception, et elle a
+        des conséquences : si ce compte Apple ou Google porte <strong>déjà</strong> une
+        sauvegarde Pioudex, l'app bascule sur celle-là. Les lignes de la sauvegarde
+        anonyme restent alors sur le serveur sans pouvoir être rattachées ni effacées,
+        puisque plus personne ne peut s'y authentifier. Écris-nous si c'est arrivé, à
+        l'adresse du point 16, et nous les supprimerons.</li>
+    <li><strong>Se déconnecter</strong> ne touche que la session de l'appareil. La
+        sauvegarde en ligne reste entière, et la synchronisation repart ensuite sur un
+        compte anonyme neuf.</li>
+  </ul>
+
+  <h2>9. Les rapports de plantage</h2>
+  <p>Quand l'app plante, un rapport technique est envoyé à <strong>Sentry</strong>
+     (projet en région Union européenne), pour corriger la panne. Des mesures de
+     performance sont également échantillonnées.</p>
+  <ul>
+    <li><strong>Aucune capture d'écran n'est jointe</strong>, et <strong>aucune
+        hiérarchie de vues</strong> non plus : les deux options sont coupées explicitement
+        dans le code, pour que la garantie ne dépende pas d'une valeur par défaut.</li>
+    <li><strong>Pioudex n'attache aucun identifiant d'utilisateur</strong> aux rapports, et
+        l'app n'y ajoute ni fil d'Ariane, ni suivi de navigation, ni aucune donnée qu'elle
+        aurait collectée : rien dans le code de Pioudex n'alimente Sentry.</li>
+    <li>Un rapport contient donc la trace technique du plantage et le contexte que le SDK
+        de Sentry collecte par défaut, à propos de l'appareil, du système et de la version
+        de l'app. Pioudex ne modifie pas cette liste et ne la reproduit pas ici plutôt que
+        d'en donner une version approximative.</li>
+    <li><strong>Il n'y a pas d'interrupteur dans l'app</strong> pour ces rapports.</li>
+  </ul>
+
+  <h2>10. L'abonnement Pioudex Plus</h2>
+  <p>L'achat et le paiement sont gérés <strong>entièrement par l'App Store ou Google
+     Play</strong> : Pioudex ne voit ni numéro de carte, ni coordonnées bancaires. L'état
+     de l'abonnement, actif ou non, est vérifié par <strong>RevenueCat</strong> à partir de
+     ce que la boutique délivre.</p>
+  <p>À la date de cette page, <strong>aucun identifiant Pioudex ne lui est transmis</strong> :
+     le composant emploie son propre identifiant anonyme. Aucune espèce, aucune capture,
+     aucune photo, aucun son et aucune position ne lui sont envoyés. Si cela change, cette
+     page sera mise à jour pour dire quel identifiant lui est passé.</p>
+
+  <h2>11. Les notifications</h2>
+  <p>Les notifications de Pioudex sont <strong>locales, exclusivement</strong> : elles sont
+     programmées et déclenchées par le téléphone. Il n'y a
+     <strong>ni serveur de notifications, ni jeton d'appareil</strong>. La permission
+     système n'est demandée qu'au moment où tu actives le réglage.</p>
+
+  <h2>12. Effacer</h2>
+  <h3>La sauvegarde en ligne</h3>
+  <p>Profil, puis Réglages, puis la section Sauvegarde, puis <strong>Supprimer</strong>,
+     avec une confirmation. <strong>Ce bouton n'apparaît qu'une fois la sauvegarde reliée</strong>
+     à un compte Apple ou Google : une sauvegarde restée anonyme n'est joignable ni par l'app
+     ni par courriel, faute d'identité qui permette de la retrouver. La désinstallation est
+     alors le seul geste possible, et elle la laisse mourir sur place. L'app efface d'abord les photos du dépôt, puis supprime le
+     compte lui-même, ce qui emporte en cascade toutes les lignes du journal en ligne.</p>
+  <div class="note">
+    <p><strong>Ces gestes ne touchent à rien sur le téléphone.</strong> Ni le dex, ni le
+       journal, ni les prises. Ta collection reste, et une sauvegarde anonyme neuve
+       reprend ensuite. La marche à suivre détaillée est sur la page
+       <a href="supprimer-mon-compte.html">Supprimer mon compte</a>.</p>
+  </div>
+  <h3>Ce qui est sur le téléphone</h3>
+  <ul>
+    <li><strong>Libérer la place</strong>, dans les Réglages, efface toutes les prises,
+        photos et sons, sur le téléphone <strong>et dans la sauvegarde en ligne</strong>.
+        Le dex ne bouge pas.</li>
+    <li><strong>Désinstaller l'app</strong> supprime tout ce qui est local : le journal,
+        les prises et les réglages.</li>
+  </ul>
+
+  <h2>13. Les services qui interviennent</h2>
+  <div class="tablewrap">
+  <table>
+    <tr><th>Service</th><th>Pourquoi</th><th>Ce qu'il reçoit</th></tr>
+    <tr><td>Google Cloud Run</td><td>Identification par la photo</td>
+        <td>La photo, le code de département, le mois</td></tr>
+    <tr><td>Supabase (Paris)</td><td>Sauvegarde de la collection</td>
+        <td>Le journal, les photos conservées, l'adresse e-mail si tu relies un compte</td></tr>
+    <tr><td>Sentry (UE)</td><td>Rapports de plantage</td>
+        <td>La trace du plantage et le contexte technique</td></tr>
+    <tr><td>RevenueCat</td><td>État de l'abonnement</td>
+        <td>Les informations d'achat de la boutique</td></tr>
+    <tr><td>Apple, Google</td><td>Connexion facultative, paiement</td>
+        <td>Ce que leurs propres flux traitent</td></tr>
+  </table>
+  </div>
+  <p>Il n'y a <strong>ni publicité, ni traceur publicitaire, ni mesure d'audience, ni
+     revente de données</strong>. Aucun composant d'analytique n'est présent dans l'app.
+     Les polices de caractères sont embarquées, pour qu'aucun affichage n'aille les
+     chercher ailleurs, et le catalogue est local.</p>
+
+  <h2>14. Bases légales et durées</h2>
+  <ul>
+    <li><strong>Identification, dex, sauvegarde</strong> : exécution du service que tu as
+        demandé en installant l'app, dans les termes des
+        <a href="conditions.html">conditions d'utilisation</a>.</li>
+    <li><strong>Rapports de plantage</strong> : intérêt légitime à corriger les pannes.</li>
+    <li><strong>Abonnement</strong> : exécution du contrat d'abonnement.</li>
+    <li><strong>Durées</strong> : les données locales vivent tant que l'app est installée,
+        et les prises tant que tu ne les effaces pas. Les données en ligne vivent tant que
+        la sauvegarde existe : rien ne les efface automatiquement, et la suppression du
+        compte les emporte immédiatement.</li>
+  </ul>
+
+  <h2>15. Tes droits, et ce que l'app permet</h2>
+  <p>Le RGPD te donne des droits d'accès, de rectification, d'effacement, de limitation,
+     d'opposition et de portabilité. Voici où chacun se trouve, sans arrondir les angles.</p>
+  <div class="tablewrap">
+  <table>
+    <tr><th>Droit</th><th>Dans l'app</th></tr>
+    <tr><td>Effacement en ligne</td>
+        <td>Oui, sauvegarde reliée : Réglages, Sauvegarde, Supprimer</td></tr>
+    <tr><td>Effacement local</td>
+        <td>Partiel : Libérer la place efface les prises ; la désinstallation efface le reste</td></tr>
+    <tr><td>Retrait de l'appareil</td>
+        <td>Oui : Se déconnecter</td></tr>
+    <tr><td>Accès, rectification</td>
+        <td><strong>Aucun écran</strong> : par e-mail</td></tr>
+    <tr><td>Portabilité, export</td>
+        <td><strong>L'app ne propose aucun export</strong> : par e-mail</td></tr>
+    <tr><td>Opposition à la sauvegarde</td>
+        <td><strong>Aucun réglage ne permet de la désactiver</strong></td></tr>
+  </table>
+  </div>
+  <p>Pour les droits qui ne passent pas par un écran, écris à
+     <a href="mailto:coulonpierrick@gmail.com">coulonpierrick@gmail.com</a> : la réponse est
+     due dans le mois. Si ta sauvegarde est reliée à un compte Apple ou Google, écris depuis
+     l'adresse de ce compte, c'est le seul moyen de la retrouver.</p>
+
+  <h2>16. Réclamation</h2>
+  <p>Si une réponse ne te satisfait pas, tu peux saisir la Commission nationale de
+     l'informatique et des libertés (CNIL), <a href="https://www.cnil.fr">cnil.fr</a>.</p>
+
+  <h2>17. Modifications</h2>
+  <p>Cette page porte sa date de mise à jour en tête. Toute évolution de ce qui est
+     collecté y sera reportée avant d'être mise en service.</p>
+
+  <h2>18. Contact</h2>
+  <p><a href="mailto:coulonpierrick@gmail.com">coulonpierrick@gmail.com</a>, et la
+     <a href="support.html">page support</a>.</p>
+
+  <footer>Pioudex, les oiseaux de France, au son et à l'image.
+    <br><a href="conditions.html">Conditions d'utilisation</a> ·
+    <a href="confidentialite.html">Politique de confidentialité</a> ·
+    <a href="supprimer-mon-compte.html">Supprimer mon compte</a> ·
+    <a href="support.html">Support</a></footer>
+</main>
+</body>
+</html>
