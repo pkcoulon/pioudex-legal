@@ -46,7 +46,7 @@
 <body>
 <main>
   <h1>🐦 Politique de confidentialité</h1>
-  <p class="updated">Pioudex · dernière mise à jour : 31 août 2026</p>
+  <p class="updated">Pioudex · dernière mise à jour : 2 septembre 2026</p>
   <p>
     <span class="pill">Catalogue embarqué</span>
     <span class="pill">Position à la maille du département</span>
@@ -67,30 +67,55 @@
   <h2>2. Les destinations réseau</h2>
   <p>Les destinations réseau de l'app sont les suivantes, et chacune est décrite plus bas :</p>
   <ul>
-    <li>le <strong>service d'identification par la photo</strong> ;</li>
+    <li>le <strong>service d'identification</strong> : la photo, et les prises audio quand
+        le modèle sonore embarqué tombe en panne ;</li>
     <li>la <strong>sauvegarde en ligne</strong> de ta collection ;</li>
-    <li>les <strong>rapports de plantage</strong>.</li>
+    <li>les <strong>rapports de plantage</strong> ;</li>
+    <li>le <strong>composant d'abonnement</strong>, joint dès le lancement, que tu sois
+        abonné ou non.</li>
   </ul>
-  <p>S'y ajoute, si tu prends l'abonnement, le service qui vérifie qu'il est actif.
-     L'identification au son s'exécute normalement sur le téléphone, le modèle étant embarqué dans l'app ;
-     en cas de panne de ce modèle embarqué, les enregistrements de la session (une à trois prises) sont
-     envoyés à ce même service, avec le code de département et le mois. Le modèle embarqué
-     s'exécute sur le téléphone.</p>
+  <p>L'identification au son s'exécute sur le téléphone, le modèle étant embarqué dans
+     l'app. En cas de panne de ce modèle, les enregistrements de la session (une à trois
+     prises) sont envoyés au service d'identification, avec le code de département et le
+     mois.</p>
 
   <h2>3. Ce qui est enregistré sur le téléphone</h2>
+  <p>Tout ce que l'app écrit elle-même va dans son dossier de support, sous les noms qui
+     suivent.</p>
   <ul>
-    <li><strong>Le journal du dex</strong> : pour chaque espèce débloquée, un identifiant,
-        le nom scientifique, le <strong>code de département</strong>, le geste employé
-        (son ou photo), le palier de confiance (certain ou probable), la date, et le lien
-        vers la prise conservée.</li>
-    <li><strong>Les prises</strong> : les photos et les enregistrements sonores que tu
-        choisis de garder, rangés dans le dossier de l'app.</li>
-    <li><strong>Le département retenu</strong>, dans un fichier qui ne contient que ce
-        code.</li>
-    <li><strong>Le nombre de photos identifiées dans la journée</strong>, qui sert au
-        quota de la version gratuite. Il est compté en local et n'est jamais synchronisé.</li>
-    <li><strong>Le réglage des notifications d'événements.</strong></li>
+    <li><strong>Le journal du dex</strong> (<code>journal_captures.json</code>) : pour
+        chaque espèce débloquée, un identifiant, le nom scientifique, le <strong>code de
+        département</strong>, le geste employé (son ou photo), le palier de confiance
+        (certain ou probable), la date, et le lien vers la prise conservée.</li>
+    <li><strong>Les prises</strong> (dossier <code>prises/</code>) : les photos et les
+        enregistrements sonores que tu choisis de garder.</li>
+    <li><strong>Le département retenu</strong> (<code>departement.json</code>), un fichier
+        qui ne contient que ce code.</li>
+    <li><strong>Le nombre de photos identifiées dans la journée</strong>
+        (<code>quota_photo.json</code>), qui sert au quota de la version gratuite. Il est
+        compté en local et n'est jamais synchronisé.</li>
+    <li><strong>Le réglage des notifications d'événements</strong>
+        (<code>notifications_evenements.json</code>), et le compte des ouvertures de l'app
+        qui sert à proposer ce réglage une seule fois, à la deuxième ouverture
+        (<code>proposition_notifications.json</code>).</li>
+    <li><strong>Le fait que la prise en main a été vue</strong>
+        (<code>onboarding.json</code>).</li>
+    <li><strong>Le format des compteurs</strong>, fraction ou pourcentage
+        (<code>affichage.json</code>).</li>
+    <li><strong>Une copie du catalogue et du modèle sonore</strong> embarqués dans l'app
+        (<code>catalogue.sqlite</code>, <code>perch_elague.tflite</code>, chacun avec son
+        empreinte) : la base et l'interpréteur lisent un fichier, pas une ressource de
+        l'app.</li>
   </ul>
+  <p>Dans le dossier temporaire, que le système balaie : l'enregistrement en cours avant
+     son identification, la photo préparée pour l'identification, et la vue recadrée
+     quand tu resserres le cadre sur l'oiseau.</p>
+  <p>Les composants tiers écrivent aussi pour eux-mêmes : la session de la sauvegarde (le
+     jeton de connexion à ton compte, dans les préférences de l'app) ; l'identifiant
+     anonyme et l'état de l'abonnement mis en cache par le composant d'abonnement (point
+     10) ; l'identifiant d'installation du composant de rapports de plantage (point 9) ;
+     et, si tu relies un compte Google, la session Google dans le trousseau du
+     téléphone.</p>
   <p>Le journal du dex n'ajoute que des lignes : il n'a pas de geste de suppression
      unitaire. Ce qui est sur le téléphone disparaît avec la désinstallation de l'app, et
      les prises peuvent être effacées avant cela (voir le point 12).</p>
@@ -217,32 +242,45 @@
         demandé</strong>, et cette adresse n'est affichée nulle part dans l'app : l'écran
         ne nomme que la porte employée, ton compte Apple ou ton compte Google.</li>
     <li>Quand ta sauvegarde était anonyme, elle est <strong>convertie</strong> et
-        l'identifiant reste le même : les captures survivent. Une exception, et elle a
-        des conséquences : si ce compte Apple ou Google porte <strong>déjà</strong> une
-        sauvegarde Pioudex, l'app bascule sur celle-là. Les lignes de la sauvegarde
-        anonyme restent alors sur le serveur sans pouvoir être rattachées ni effacées,
-        puisque plus personne ne peut s'y authentifier. Écris-nous si c'est arrivé, à
-        l'adresse du point 16, et nous les supprimerons.</li>
+        l'identifiant reste le même : les captures survivent. Un cas à part : si ce
+        compte Apple ou Google porte <strong>déjà</strong> une sauvegarde Pioudex, l'app
+        efface d'abord la sauvegarde anonyme, photos puis compte, puis bascule sur la
+        sauvegarde existante. Le journal du téléphone n'a rien perdu : la synchronisation
+        suivante le remonte entier sous ce compte. Si cet effacement échoue, la bascule a
+        lieu quand même et les lignes anonymes restent sur le serveur sans pouvoir être
+        rattachées ; écris à l'adresse du point 18 et nous les supprimerons.</li>
     <li><strong>Se déconnecter</strong> ne touche que la session de l'appareil. La
         sauvegarde en ligne reste entière, et la synchronisation repart ensuite sur un
         compte anonyme neuf.</li>
   </ul>
 
   <h2>9. Les rapports de plantage</h2>
-  <p>Quand l'app plante, un rapport technique est envoyé à <strong>Sentry</strong>
-     (projet en région Union européenne), pour corriger la panne. Des mesures de
-     performance sont également échantillonnées.</p>
+  <p>Les rapports techniques partent vers <strong>Sentry</strong> (projet en région Union
+     européenne), pour corriger les pannes. Le composant est actif dès le lancement : à
+     chaque ouverture de l'app, il signale le début et la fin de la session, ce qui compte
+     les sessions avec et sans plantage par version ; une erreur ou un plantage envoie un
+     rapport ; une mesure de performance sur cinq est échantillonnée.</p>
   <ul>
     <li><strong>Aucune capture d'écran n'est jointe</strong>, et <strong>aucune
         hiérarchie de vues</strong> non plus : les deux options sont coupées explicitement
         dans le code, pour que la garantie ne dépende pas d'une valeur par défaut.</li>
-    <li><strong>Pioudex n'attache aucun identifiant d'utilisateur</strong> aux rapports, et
-        l'app n'y ajoute ni fil d'Ariane, ni suivi de navigation, ni aucune donnée qu'elle
-        aurait collectée : rien dans le code de Pioudex n'alimente Sentry.</li>
-    <li>Un rapport contient donc la trace technique du plantage et le contexte que le SDK
-        de Sentry collecte par défaut, à propos de l'appareil, du système et de la version
-        de l'app. Pioudex ne modifie pas cette liste et ne la reproduit pas ici plutôt que
-        d'en donner une version approximative.</li>
+    <li>Le code de Pioudex n'attache aux rapports ni ton compte, ni un identifiant qu'il
+        connaît, ni fil d'Ariane, ni aucune donnée collectée par l'app. Le composant, lui,
+        attache à chaque rapport et à chaque session <strong>un identifiant
+        d'installation</strong> : un nombre tiré au hasard sur l'appareil à la première
+        ouverture, écrit dans le cache de l'app et propre à Sentry. Il ne correspond ni à
+        ton compte Pioudex, ni à ton compte Apple ou Google, ni à l'identifiant de
+        l'appareil, et il disparaît avec la désinstallation. Sentry l'affiche comme
+        « utilisateur » pour compter les installations touchées par une panne.</li>
+    <li>Un rapport contient la trace technique et le contexte que le composant collecte
+        par défaut : le modèle de l'appareil, le nom et la version du système, la version
+        de l'app, la langue et le fuseau horaire, l'orientation et la taille de l'écran, la
+        mémoire totale et disponible, une empreinte calculée à partir de l'identifiant
+        fournisseur de l'appareil, de son modèle et de l'identifiant de l'app, et les
+        repères que le composant pose de lui-même : passage en arrière-plan et retour,
+        alerte de mémoire basse, changement de connexion réseau (Wi-Fi, cellulaire,
+        aucune). Cette liste est lue dans les composants tels qu'ils sont à la date de
+        cette page.</li>
     <li><strong>Il n'y a pas d'interrupteur dans l'app</strong> pour ces rapports.</li>
   </ul>
 
@@ -251,8 +289,17 @@
      Play</strong> : Pioudex ne voit ni numéro de carte, ni coordonnées bancaires. L'état
      de l'abonnement, actif ou non, est vérifié par <strong>RevenueCat</strong> à partir de
      ce que la boutique délivre.</p>
-  <p>À la date de cette page, <strong>aucun identifiant Pioudex ne lui est transmis</strong> :
-     le composant emploie son propre identifiant anonyme. Aucune espèce, aucune capture,
+  <p>Ce composant se configure <strong>dès le lancement de l'app, pour tout
+     utilisateur</strong>, abonné ou non : l'onglet Dex et le Profil, montés au démarrage,
+     lui demandent si Plus est actif ; la carte et l'identification photo le font aussi. Il
+     génère son propre identifiant anonyme, le met en cache sur le téléphone et l'envoie
+     avec chaque requête, ainsi que l'identifiant de l'app, le modèle de l'appareil, la
+     version du système et de l'app, le pays de la boutique et, sur iOS, l'identifiant
+     fournisseur de l'appareil, celui que le système attribue à l'éditeur pour cet
+     appareil. Le reçu de la boutique lui est envoyé à l'achat, à la restauration et quand
+     la boutique signale une transaction, renouvellement compris.</p>
+  <p><strong>Aucun identifiant Pioudex ne lui est transmis</strong> : la fonction qui le
+     ferait existe dans le code et n'est appelée nulle part. Aucune espèce, aucune capture,
      aucune photo, aucun son et aucune position ne lui sont envoyés. Si cela change, cette
      page sera mise à jour pour dire quel identifiant lui est passé.</p>
 
@@ -289,14 +336,14 @@
   <div class="tablewrap">
   <table>
     <tr><th>Service</th><th>Pourquoi</th><th>Ce qu'il reçoit</th></tr>
-    <tr><td>Google Cloud Run</td><td>Identification par la photo</td>
-        <td>La photo, le code de département, le mois</td></tr>
+    <tr><td>Google Cloud Run</td><td>Identification par la photo, et au son en repli</td>
+        <td>La photo, ou les prises audio en repli ; le code de département ; le mois</td></tr>
     <tr><td>Supabase (Paris)</td><td>Sauvegarde de la collection</td>
         <td>Le journal, les photos conservées, l'adresse e-mail si tu relies un compte</td></tr>
-    <tr><td>Sentry (UE)</td><td>Rapports de plantage</td>
-        <td>La trace du plantage et le contexte technique</td></tr>
-    <tr><td>RevenueCat</td><td>État de l'abonnement</td>
-        <td>Les informations d'achat de la boutique</td></tr>
+    <tr><td>Sentry (UE)</td><td>Rapports de plantage, sessions</td>
+        <td>La trace, le contexte technique, l'identifiant d'installation</td></tr>
+    <tr><td>RevenueCat</td><td>État de l'abonnement, dès le lancement</td>
+        <td>Son identifiant anonyme, l'identifiant de l'app et de l'appareil, le reçu de la boutique</td></tr>
     <tr><td>Apple, Google</td><td>Connexion facultative, paiement</td>
         <td>Ce que leurs propres flux traitent</td></tr>
   </table>
@@ -312,7 +359,8 @@
         demandé en installant l'app, dans les termes des
         <a href="conditions.html">conditions d'utilisation</a>.</li>
     <li><strong>Rapports de plantage</strong> : intérêt légitime à corriger les pannes.</li>
-    <li><strong>Abonnement</strong> : exécution du contrat d'abonnement.</li>
+    <li><strong>Abonnement</strong>, et la vérification de son état pour tout
+        utilisateur : exécution du contrat d'abonnement et du service.</li>
     <li><strong>Durées</strong> : les données locales vivent tant que l'app est installée,
         et les prises tant que tu ne les effaces pas. Les données en ligne vivent tant que
         la sauvegarde existe : rien ne les efface automatiquement, et la suppression du
@@ -360,7 +408,8 @@
     <br><a href="conditions.html">Conditions d'utilisation</a> ·
     <a href="confidentialite.html">Politique de confidentialité</a> ·
     <a href="supprimer-mon-compte.html">Supprimer mon compte</a> ·
-    <a href="support.html">Support</a></footer>
+    <a href="support.html">Support</a> ·
+    <a href="index.html#mentions-legales">Mentions légales</a></footer>
 </main>
 </body>
 </html>
